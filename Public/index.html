@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LoftMusica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <div class="glass-container">
+      <h1>🎧 Loft<span>Musica</span></h1>
+      
+      <div id="roomSection" class="room-buttons">
+        <button onclick="createRoom()">Create Room</button>
+        <input type="text" id="roomCodeInput" placeholder="Enter Room Code"/>
+        <button onclick="joinRoom()">Join Room</button>
+      </div>
+
+      <div id="activeRoom" style="display:none;">
+        <h2 id="roomLabel"></h2>
+        <button id="copyBtn" onclick="copyRoomCode()">Copy Code</button>
+      </div>
+
+      <div id="music-controls" style="display: none;">
+        <input type="file" id="audioFile" accept="audio/*" />
+        <audio id="audioPlayer" controls></audio>
+      </div>
+
+      <div class="chat" id="chatBox" style="display: none;">
+        <div id="messages"></div>
+        <input id="chatInput" placeholder="Type a message..." onkeydown="handleChat(event)" />
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

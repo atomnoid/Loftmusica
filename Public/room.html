@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LoftMusica Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎶 LoftMusica</h1>
+    <h3 id="roomDisplay">Room: </h3>
+
+    <input type="file" id="audioFile">
+    <audio id="audioPlayer" controls></audio>
+
+    <div class="controls">
+      <button id="playBtn">▶️</button>
+      <button id="pauseBtn">⏸️</button>
+    </div>
+
+    <div class="chat">
+      <div id="chatBox"></div>
+      <input id="chatInput" placeholder="Type a message">
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
