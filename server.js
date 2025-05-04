@@ -29,16 +29,15 @@ wss.on('connection', (ws) => {
 
     if (type === 'create-room') {
       const code = uuidv4().split('-')[0];
-      rooms[code] = [];
+      rooms[code] = [ws];
       ws.roomCode = code;
-      rooms[code].push(ws);
       ws.send(JSON.stringify({ type: 'room-created', payload: code }));
     }
 
     if (type === 'join-room') {
       if (rooms[roomCode]) {
-        ws.roomCode = roomCode;
         rooms[roomCode].push(ws);
+        ws.roomCode = roomCode;
         ws.send(JSON.stringify({ type: 'joined-room', payload: roomCode }));
       } else {
         ws.send(JSON.stringify({ type: 'error', payload: 'Room not found' }));
