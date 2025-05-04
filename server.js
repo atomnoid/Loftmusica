@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/room', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'room.html'));
+});
+
 const server = app.listen(PORT, '0.0.0.0', () => console.log(`Server running on http://localhost:${PORT}`));
 
 const wss = new WebSocket.Server({ server });
