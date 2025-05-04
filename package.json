@@ -1,16 +1,13 @@
 {
   "name": "loftmusica",
   "version": "1.0.0",
-  "description": "Real-time music rooms and chat app built with Node.js, Express, and WebSockets.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Aayush",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "uuid": "^9.0.0",
-    "ws": "^8.13.0"
+    "express": "^5.1.0",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.2"
   }
 }
