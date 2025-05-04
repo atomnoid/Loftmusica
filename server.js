@@ -10,14 +10,14 @@ const PORT = process.env.PORT || 3000;
 
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/Public/index.html');
 });
 
 app.get('/room', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'room.html'));
+  res.sendFile(path.join(__dirname, 'Public', 'room.html'));
 });
 
 const server = app.listen(PORT, '0.0.0.0', () => console.log(`Server running on http://localhost:${PORT}`));
